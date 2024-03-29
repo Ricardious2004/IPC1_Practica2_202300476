@@ -20,14 +20,6 @@ Nuestra aplicación te permite planificar y realizar tus viajes en carro de una 
 
 - **Explorar tu historial de viajes**: Revive tus recuerdos de viaje consultando el historial de tus viajes completados.
 
-### Tarifas de Gasolina ⛽
-
-¡Mantén tu tanque lleno para seguir adelante! Aquí están las tarifas de gasolina por tipo de vehículo:
-
-- **Motocicleta**: $0.1 por galón/km
-- **Vehículo Estándar**: $0.3 por galón/km
-- **Vehículo Premium**: $0.45 por galón/km
-
 ### ¿Qué necesitas saber? 📚
 
 Encontrarás toda la información necesaria para entender y utilizar nuestra aplicación en los siguientes documentos:
