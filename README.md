@@ -1,34 +1,28 @@
-## ¡Bienvenido a nuestra Aplicación de Gestión de Viajes en Carro! 🚗✨
+## Welcome to our Car Trip Management Application! 🚗✨
 
-¡Hola viajero! En este repositorio encontrarás una emocionante aplicación de escritorio diseñada para hacer que tus viajes en carro sean más fáciles y divertidos. Permítenos guiarte a través de lo que nuestra aplicación tiene para ofrecer:
+Hello traveler! In this repository, you will find an exciting desktop application designed to make your car trips easier and more enjoyable. Let us guide you through what our application has to offer:
 
-### ¿Qué es? 🌍
+### What is it? 🌍
 
-Nuestra aplicación te permite planificar y realizar tus viajes en carro de una manera sencilla y eficiente. Desde ingresar tu ubicación actual hasta llegar a tu destino deseado, podrás visualizar en tiempo real el estado de tu viaje desde el punto de partida hasta tu punto final.
+Our application allows you to plan and execute your car trips in a simple and efficient way. From entering your current location to reaching your desired destination, you can visualize the real-time status of your journey from the starting point to the final destination.
 
-### ¿Qué puedes hacer? 🚀
+### What can you do? 🚀
 
-- **Navegar fácilmente**: Con nuestro menú intuitivo, podrás moverte sin esfuerzo entre las diferentes funciones de la aplicación.
+- **Navigate easily**: With our intuitive menu, you can effortlessly move between the different functions of the application.
+- **Load routes with ease**: Forget about manually entering routes. Simply load your trips from a CSV file, and our application will take care of the rest.
+- **Customize your trip**: Edit the distance of a specific trip according to your needs.
+- **Generate your ideal trip**: Select your starting point, destination, and type of transport to generate the perfect trip for you.
+- **Start trips with confidence**: View all trips prepared to start and begin your adventures when you're ready.
+- **Explore your trip history**: Relive your travel memories by checking the history of your completed trips.
 
-- **Cargar rutas con facilidad**: Olvídate de ingresar manualmente las rutas. Simplemente carga tus viajes desde un archivo CSV y nuestra aplicación se encargará del resto.
+### What do you need to know? 📚
 
-- **Personalizar tu viaje**: Edita la distancia de un viaje específico según tus necesidades.
+You will find all the necessary information to understand and use our application in the following documents:
 
-- **Generar tu viaje ideal**: Selecciona tu punto de partida, destino y tipo de transporte para generar el viaje perfecto para ti.
+- **Technical Manual**: Details about the solution, class diagrams, and flowcharts of main methods.
+- **User Manual**: General information about the program, minimum system requirements, and guide to the most important functions.
 
-- **Iniciar viajes con confianza**: Visualiza todos los viajes preparados para iniciar y comienza tus aventuras cuando estés listo.
+### Let's get started! 🎉
 
-- **Explorar tu historial de viajes**: Revive tus recuerdos de viaje consultando el historial de tus viajes completados.
-
-### ¿Qué necesitas saber? 📚
-
-Encontrarás toda la información necesaria para entender y utilizar nuestra aplicación en los siguientes documentos:
-
-- **Manual Técnico**: Detalles sobre la solución, diagramas de clases y flujo de métodos principales.
-
-- **Manual de Usuario**: Información general sobre el programa, requisitos mínimos del sistema y guía para las funciones más importantes.
-
-### ¡Hora de empezar! 🎉
-
-Con nuestra aplicación de gestión de viajes en carro, tus aventuras estarán llenas de emoción y comodidad. ¡Esperamos que disfrutes tu viaje con nosotros! 🌟
+With our car trip management application, your adventures will be full of excitement and comfort. We hope you enjoy your journey with us! 🌟
 
