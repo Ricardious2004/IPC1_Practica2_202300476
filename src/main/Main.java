@@ -1,33 +1,10 @@
 package main;
 
-import com.formdev.flatlaf.FlatIntelliJLaf;
-import com.formdev.flatlaf.FlatLightLaf;
-import com.formdev.flatlaf.intellijthemes.FlatCarbonIJTheme;
-import com.formdev.flatlaf.intellijthemes.FlatDarkPurpleIJTheme;
-import com.formdev.flatlaf.intellijthemes.FlatGradiantoDarkFuchsiaIJTheme;
-import com.formdev.flatlaf.intellijthemes.FlatGradiantoMidnightBlueIJTheme;
-import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatGitHubDarkIJTheme;
-import com.formdev.flatlaf.themes.FlatMacDarkLaf;
 import com.formdev.flatlaf.themes.FlatMacLightLaf;
-import java.awt.Color;
-import java.awt.Insets;
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.net.IDN;
 import java.util.ArrayList;
-import java.util.Scanner;
 import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
 import javax.swing.UIManager;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
