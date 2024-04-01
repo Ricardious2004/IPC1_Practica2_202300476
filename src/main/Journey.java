@@ -33,13 +33,10 @@ public class Journey extends Thread {
         try {
             // Calcula el desplazamiento necesario en el eje X
             int deltaX = endX - startX;
-
             // Calcula la distancia total que se necesita para llegar justo antes del destino
             double distance = Math.abs(deltaX);
-
             // Calcula el número total de pasos necesarios para alcanzar el destino
             int numSteps = (int) (distance / stepSize);
-
             // Calcula el tamaño del paso en el eje X
             double stepX = deltaX / (double) numSteps;
 
@@ -51,10 +48,9 @@ public class Journey extends Thread {
                     this.labelToMove.repaint();
 
                 });
-                Thread.sleep(20); // Pausa el hilo para suavizar el movimiento
+                Thread.sleep(140); // Pausa el hilo para suavizar el movimiento
             }
 
-            // Asegúrate de que el JLabel se detenga exactamente en la posición final
             SwingUtilities.invokeLater(() -> {
                 labelToMove.setLocation(endX, labelToMove.getY());
                 this.labelToMove.repaint();
@@ -66,7 +62,4 @@ public class Journey extends Thread {
         }
     }
 
-    public void stopThread() {
-        this.running = false;
-    }
 }
