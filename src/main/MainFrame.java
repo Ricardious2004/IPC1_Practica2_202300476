@@ -1,6 +1,7 @@
 package main;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -29,6 +30,7 @@ import javax.swing.table.TableModel;
 import main.MainFrame.jPanelGradient;
 import javax.swing.JLabel;
 import javax.swing.SwingWorker;
+import org.netbeans.lib.awtextra.AbsoluteLayout;
 
 /**
  *
@@ -66,6 +68,11 @@ public class MainFrame extends javax.swing.JFrame {
     private JFileChooser fileChooser;
     private File JFileSelected;
     private Rectangle transport;
+    
+    
+    public JLabel vehicle1 = new JLabel();
+    public JLabel vehicle2 = new JLabel();
+    public JLabel vehicle3 = new JLabel();
 
     public MainFrame() {
         this.setUndecorated(true);
@@ -97,6 +104,8 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        panelTripStart.repaint();
+         panelTripStart.setFocusable(true);
     }
     
     public JLabel getTransport1(){
@@ -445,7 +454,7 @@ private void updateVehicleAvailability(String vehicleType) {
         typeBox = new javax.swing.JComboBox<>();
         noPilotsLabel = new javax.swing.JLabel();
         generateTrip = new javax.swing.JButton();
-        paneTripStart = new javax.swing.JPanel();
+        panelTripStart = new javax.swing.JPanel();
         transport3 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         start1 = new javax.swing.JButton();
@@ -641,7 +650,7 @@ private void updateVehicleAvailability(String vehicleType) {
         });
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 10, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ricardious\\Downloads\\Reef.jpg")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vehicles/Reef.jpg"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 800, 50));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
@@ -777,12 +786,12 @@ private void updateVehicleAvailability(String vehicleType) {
 
         jTabbedPane1.addTab("tab2", jPanel7);
 
-        paneTripStart.setBackground(new java.awt.Color(255, 255, 255));
-        paneTripStart.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        paneTripStart.add(transport3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, -1, 50));
+        panelTripStart.setBackground(new java.awt.Color(255, 255, 255));
+        panelTripStart.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panelTripStart.add(transport3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, -1, 50));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vehicles/carretera.png"))); // NOI18N
-        paneTripStart.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 730, 30));
+        panelTripStart.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 480, 570, 30));
 
         start1.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
         start1.setText("Start");
@@ -796,32 +805,42 @@ private void updateVehicleAvailability(String vehicleType) {
                 start1ActionPerformed(evt);
             }
         });
-        paneTripStart.add(start1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
+        panelTripStart.add(start1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 70, -1));
 
         jButton3.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
         jButton3.setText("Return");
-        paneTripStart.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 150, -1, -1));
+        panelTripStart.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 110, -1, -1));
 
+        lblTransport1.setFont(new java.awt.Font("Corbel", 2, 12)); // NOI18N
         lblTransport1.setText("Pending");
-        paneTripStart.add(lblTransport1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        panelTripStart.add(lblTransport1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
+        lblDistance1.setFont(new java.awt.Font("Corbel", 2, 12)); // NOI18N
         lblDistance1.setText("Pending");
-        paneTripStart.add(lblDistance1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
+        panelTripStart.add(lblDistance1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
 
+        lblStart1.setFont(new java.awt.Font("Corbel", 2, 12)); // NOI18N
         lblStart1.setText("Pending");
-        paneTripStart.add(lblStart1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, 10));
+        panelTripStart.add(lblStart1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
 
+        lblEnd1.setFont(new java.awt.Font("Corbel", 2, 12)); // NOI18N
         lblEnd1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblEnd1.setText("Pending");
-        paneTripStart.add(lblEnd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 60, 160, -1));
-        paneTripStart.add(transport1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, 50));
+        panelTripStart.add(lblEnd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 60, 160, -1));
+        panelTripStart.add(transport1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, -1, 50));
+        transport1.getAccessibleContext().setAccessibleDescription("");
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vehicles/carretera.png"))); // NOI18N
-        paneTripStart.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 730, 30));
+        panelTripStart.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 580, 30));
 
         start2.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
         start2.setText("Start");
-        paneTripStart.add(start2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
+        start2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                start2ActionPerformed(evt);
+            }
+        });
+        panelTripStart.add(start2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 70, -1));
 
         jButton5.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
         jButton5.setText("Return");
@@ -830,19 +849,24 @@ private void updateVehicleAvailability(String vehicleType) {
                 jButton5ActionPerformed(evt);
             }
         });
-        paneTripStart.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 340, -1, -1));
-        paneTripStart.add(transport2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, 50));
+        panelTripStart.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 300, -1, -1));
+        panelTripStart.add(transport2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, -1, 50));
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vehicles/carretera.png"))); // NOI18N
-        paneTripStart.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 730, 30));
+        panelTripStart.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, 570, 30));
 
         start3.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
         start3.setText("Start");
-        paneTripStart.add(start3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, -1, -1));
+        start3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                start3ActionPerformed(evt);
+            }
+        });
+        panelTripStart.add(start3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 70, -1));
 
         jButton7.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
         jButton7.setText("Return");
-        paneTripStart.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 520, -1, -1));
+        panelTripStart.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 480, -1, -1));
 
         jButton8.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         jButton8.setText("Start all");
@@ -851,36 +875,44 @@ private void updateVehicleAvailability(String vehicleType) {
                 jButton8ActionPerformed(evt);
             }
         });
-        paneTripStart.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 590, -1, -1));
-        paneTripStart.add(lblBarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 0, 40, 660));
+        panelTripStart.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 580, -1, -1));
+        panelTripStart.add(lblBarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 0, 10, 660));
 
+        lblTransport2.setFont(new java.awt.Font("Corbel", 2, 12)); // NOI18N
         lblTransport2.setText("Pending");
-        paneTripStart.add(lblTransport2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
+        panelTripStart.add(lblTransport2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
 
+        lblDistance2.setFont(new java.awt.Font("Corbel", 2, 12)); // NOI18N
         lblDistance2.setText("Pending");
-        paneTripStart.add(lblDistance2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+        panelTripStart.add(lblDistance2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
+        lblStart2.setFont(new java.awt.Font("Corbel", 2, 12)); // NOI18N
         lblStart2.setText("Pending");
-        paneTripStart.add(lblStart2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, -1, -1));
+        panelTripStart.add(lblStart2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, -1, -1));
 
+        lblEnd2.setFont(new java.awt.Font("Corbel", 2, 12)); // NOI18N
         lblEnd2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblEnd2.setText("Pending");
-        paneTripStart.add(lblEnd2, new org.netbeans.lib.awtextra.AbsoluteConstraints(638, 240, 130, -1));
+        panelTripStart.add(lblEnd2, new org.netbeans.lib.awtextra.AbsoluteConstraints(638, 240, 130, -1));
 
+        lblTransport3.setFont(new java.awt.Font("Corbel", 2, 12)); // NOI18N
         lblTransport3.setText("Pending");
-        paneTripStart.add(lblTransport3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, -1, -1));
+        panelTripStart.add(lblTransport3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, -1, -1));
 
+        lblDistance3.setFont(new java.awt.Font("Corbel", 2, 12)); // NOI18N
         lblDistance3.setText("Pending");
-        paneTripStart.add(lblDistance3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, -1, -1));
+        panelTripStart.add(lblDistance3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, -1, -1));
 
+        lblStart3.setFont(new java.awt.Font("Corbel", 2, 12)); // NOI18N
         lblStart3.setText("Pending");
-        paneTripStart.add(lblStart3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, -1, -1));
+        panelTripStart.add(lblStart3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, -1, -1));
 
+        lblEnd3.setFont(new java.awt.Font("Corbel", 2, 12)); // NOI18N
         lblEnd3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblEnd3.setText("Pending");
-        paneTripStart.add(lblEnd3, new org.netbeans.lib.awtextra.AbsoluteConstraints(568, 430, 190, -1));
+        panelTripStart.add(lblEnd3, new org.netbeans.lib.awtextra.AbsoluteConstraints(568, 430, 190, -1));
 
-        jTabbedPane1.addTab("tab3", paneTripStart);
+        jTabbedPane1.addTab("tab3", panelTripStart);
 
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
         jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1046,7 +1078,7 @@ private void updateVehicleAvailability(String vehicleType) {
                     lblStart1.setText(startLocation1);
                     lblEnd1.setText(endLocation1);
                     lblTransport1.setText(transportType1);
-                    lblDistance1.setText(String.valueOf(distance1));
+                    lblDistance1.setText(String.valueOf("Distance " + distance1 + "Km"));
                     JOptionPane.showMessageDialog(this, "First trip generated successfully!");
                     tripsGenerated++;
                 } else {
@@ -1055,7 +1087,7 @@ private void updateVehicleAvailability(String vehicleType) {
                         lblStart1.setText(startLocation1);
                         lblEnd1.setText(endLocation1);
                         lblTransport1.setText(transportType1);
-                        lblDistance1.setText(String.valueOf(distance1));
+                        lblDistance1.setText(String.valueOf("Distance " + distance1 + "Km"));
                         tripsGenerated++;
                         JOptionPane.showMessageDialog(this, "First trip generated successfully!");
                     } else {
@@ -1147,6 +1179,18 @@ noPilotsLabel.setText("No pilots available at the moment");
     journey.start();
     }//GEN-LAST:event_start1ActionPerformed
 
+    private void start2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_start2ActionPerformed
+
+        Journey journey = new Journey(transport2, lblBarrera);
+        journey.start();
+    }//GEN-LAST:event_start2ActionPerformed
+
+    private void start3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_start3ActionPerformed
+
+        Journey journey = new Journey(transport3, lblBarrera);
+        journey.start();
+    }//GEN-LAST:event_start3ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnOpenCSV;
@@ -1207,7 +1251,7 @@ noPilotsLabel.setText("No pilots available at the moment");
     private javax.swing.JLabel lblTransport2;
     private javax.swing.JLabel lblTransport3;
     private javax.swing.JLabel noPilotsLabel;
-    private javax.swing.JPanel paneTripStart;
+    private javax.swing.JPanel panelTripStart;
     private javax.swing.JButton start1;
     private javax.swing.JButton start2;
     private javax.swing.JButton start3;
