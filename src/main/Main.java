@@ -25,15 +25,7 @@ public class Main {
     public static void main(String args[]) {
         try {
             UIManager.setLookAndFeel(new FlatMacLightLaf());
-//            UIManager.put("Button.arc", 999);
-//            UIManager.put("Component.arc", 999);
-//            UIManager.put("ProgressBar.arc", 999);
             UIManager.put("TextComponent.arc", 10);
-//            UIManager.put("ScrollBar.trackArc", 999);
-//            UIManager.put("ScrollBar.thumbArc", 999);
-//            UIManager.put("ScrollBar.trackInsets", new Insets(2, 4, 2, 4));
-//            UIManager.put("ScrollBar.thumbInsets", new Insets(2, 2, 2, 2));
-//            UIManager.put("ScrollBar.track", new Color(0xe0e0e0));
         } catch (Exception ex) {
             System.err.println("Failed to initialize LaF");
         }
@@ -43,10 +35,6 @@ public class Main {
         login.setVisible(true);
 
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        //Lectura del archivo serializado si ya existe
-        // Si la función readArchivo nos retorna un objeto entonces realizamos el casteo para que ese 
-        // objeto sea ahora un objeto arraylist que almacene rutas.
-        // Ahora si nos retorna un valor null readArchivo entonces significa que el archivo no existe
 
         
     }

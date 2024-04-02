@@ -1034,7 +1034,17 @@ private void updateVehicleAvailability(String vehicleType) {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+
+        Journey journey = new Journey(transport1, lblBarrera);
+        journey.start();
+
+        Journey journey1 = new Journey(transport2, lblBarrera);
+        journey1.start();
+
+        Journey journey2 = new Journey(transport3, lblBarrera);
+        journey2.start();
+
+
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void generateTripActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateTripActionPerformed
