@@ -517,7 +517,7 @@ private void updateVehicleAvailability(String vehicleType) {
         });
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ricardious\\Pictures\\iconos\\subir-archivo.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vehicles/subir-archivo.png"))); // NOI18N
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 30, 60));
 
         jLabel5.setFont(new java.awt.Font("Corbel", 0, 18)); // NOI18N
@@ -542,7 +542,7 @@ private void updateVehicleAvailability(String vehicleType) {
         });
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ricardious\\Pictures\\iconos\\carro-nuevo.png")); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vehicles/carro-nuevo.png"))); // NOI18N
         jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 40, 60));
 
         jLabel7.setFont(new java.awt.Font("Corbel", 0, 18)); // NOI18N
@@ -567,7 +567,7 @@ private void updateVehicleAvailability(String vehicleType) {
         });
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ricardious\\Pictures\\iconos\\ruta.png")); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vehicles/ruta.png"))); // NOI18N
         jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, 60));
 
         jLabel9.setFont(new java.awt.Font("Corbel", 0, 18)); // NOI18N
@@ -592,7 +592,7 @@ private void updateVehicleAvailability(String vehicleType) {
         });
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ricardious\\Pictures\\iconos\\historial-de-transacciones.png")); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vehicles/historial-de-transacciones.png"))); // NOI18N
         jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, 60));
 
         jLabel11.setFont(new java.awt.Font("Corbel", 0, 18)); // NOI18N
@@ -602,7 +602,7 @@ private void updateVehicleAvailability(String vehicleType) {
 
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 200, 60));
 
-        jLabel27.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ricardious\\Pictures\\iconos\\cerrar-sesion.png")); // NOI18N
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vehicles/cerrar-sesion.png"))); // NOI18N
 
         jLabel28.setBackground(new java.awt.Color(255, 255, 255));
         jLabel28.setFont(new java.awt.Font("Corbel", 0, 18)); // NOI18N
@@ -781,7 +781,7 @@ private void updateVehicleAvailability(String vehicleType) {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(85, 85, 85)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addContainerGap(188, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab2", jPanel7);
@@ -934,7 +934,7 @@ private void updateVehicleAvailability(String vehicleType) {
 
         jTabbedPane1.addTab("tab4", jPanel9);
 
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 820, 670));
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 820, 700));
 
         setSize(new java.awt.Dimension(1000, 700));
         setLocationRelativeTo(null);
